@@ -1,7 +1,24 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    lib: {
+      entry: "src/lib/index.ts", // Entry point for your library
+      name: "MyLibrary", // Library name
+      formats: ["es", "cjs"], // Output formats - ES Module and CommonJS
+    },
+    rollupOptions: {
+      // Make sure external dependencies are not bundled
+      external: ["react", "react-dom"],
+      output: {
+        // Provide global variable names for external dependencies when using UMD format
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
+    },
+  },
 });
