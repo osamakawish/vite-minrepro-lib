@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: "src/lib/index.ts", // Entry point for your library
-      name: "MyLibrary", // Library name
+      entry: "index.ts", // Entry point for your library
+      name: "MinReproLib", // Library name
       formats: ["es", "cjs"], // Output formats - ES Module and CommonJS
     },
     rollupOptions: {
