@@ -1,6 +1,4 @@
-import * as React from "react";
-
-function Comp({}): React.FC {
+export function Comp({}) {
   return (
     <>
       <div>vsdfvsfv</div>

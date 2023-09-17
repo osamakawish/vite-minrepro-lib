@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/mylibrary.cjs.js",
-  "module": "dist/mylibrary.es.js",
-  "types": "dist/mylibrary.d.ts",
+  "main": "dist/lib.cjs.js",
+  "module": "dist/lib.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -26,7 +26,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
+    "typescript": "^5.2.2",
     "vite": "^4.4.5"
   }
 }
